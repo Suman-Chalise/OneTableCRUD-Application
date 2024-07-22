@@ -1,0 +1,25 @@
+﻿
+@{
+	if(TempData["CreatedSuccess"] != null )
+	{
+			<div class="alert alert-success" role="alert">
+			<h2>@TempData["CreatedSuccess"]</h2>
+		</div>
+	}
+	if (TempData["EditedSuccess"] != null)
+	{
+	
+		<div class="alert alert-warning" role="alert">
+			<h2>@TempData["EditedSuccess"]</h2>
+		</div>
+	}
+	if (TempData["DeletedSuccess"] != null)
+	{
+		
+		<div class="alert alert-danger" role="alert">
+			<h2>@TempData["DeletedSuccess"]</h2>
+		</div>
+	}
+
+
+}

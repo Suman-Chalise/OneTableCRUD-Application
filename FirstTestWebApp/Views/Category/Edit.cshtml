@@ -1,0 +1,54 @@
+﻿@model Categories
+
+<form method="post" asp-action="Edit">
+	<div class="border p-3 mt-4">
+		<div class="row pb-2">
+			<h2 class="text-primary"> Edit Category</h2>
+			<hr />
+		</div>
+
+		<div asp-validation-summary="All"></div>  @* Validation Summery display  *@
+
+
+		<div class="mb-3">
+			<label asp-for="CategoryId"></label>
+			<input asp-for="CategoryId" class="form-control" readonly />
+			<span asp-validation-for="CategoryId" class="text-danger"></span>
+		</div>
+
+		<div class="mb-3">
+			<label asp-for="CreatedDateTime"></label>
+			<input asp-for="CreatedDateTime" class="form-control" readonly />
+			<span asp-validation-for="CreatedDateTime" class="text-danger"></span>
+		</div>
+
+
+		<div class="mb-3">
+			<label asp-for="CategoryName"></label>
+			<input asp-for="CategoryName" class="form-control" />
+			<span asp-validation-for="CategoryName" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="CategoryDescription"></label>
+			<input asp-for="CategoryDescription" class="form-control" />
+			<span asp-validation-for="CategoryDescription" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="DisplayOrder"></label>
+			<input asp-for="DisplayOrder" class="form-control" />
+			<span asp-validation-for="DisplayOrder" class="text-danger"></span>
+		</div>
+
+		<button type="submit" class="btn btn-primary">Update</button>
+		<a asp-controller="category" asp-action="Index" class="btn btn-secondary"> Back to List </a>
+
+	</div>
+
+</form>
+
+@* // script below is for client side validation and the page will not refresh  *@
+@section Scripts {
+	@{
+		<partial name="_validationScriptsPartial" />
+	}
+}
