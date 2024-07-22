@@ -1,0 +1,1 @@
+I have developed a web application using .NET Core MVC, specifically leveraging the capabilities of .NET 8. The application is designed with simplicity and efficiency in mind, utilizing a single database table to store and manage its data. For the front-end design, I have incorporated Bootstrap to ensure a responsive and visually appealing user interface.
